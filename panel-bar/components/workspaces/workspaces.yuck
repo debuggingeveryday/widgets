@@ -1,0 +1,17 @@
+(defpoll workspace :interval "0.1s" :initial "no value" "components/workspaces/scripts/workspace-active.sh")
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly true
+       :halign "start"
+    (button :class { workspace == 1 ? "is-active" : "" } :onclick "wmctrl -s 1" 1)
+    (button :class { workspace == 2 ? "is-active" : "" } :onclick "wmctrl -s 2" 2)
+    (button :class { workspace == 3 ? "is-active" : "" } :onclick "wmctrl -s 3" 3)
+    (button :class { workspace == 4 ? "is-active" : "" } :onclick "wmctrl -s 4" 4)
+    (button :class { workspace == 5 ? "is-active" : "" } :onclick "wmctrl -s 5" 5)
+    (button :class { workspace == 6 ? "is-active" : "" } :onclick "wmctrl -s 6" 6)
+    (button :class { workspace == 7 ? "is-active" : "" } :onclick "wmctrl -s 7" 7)
+    (button :class { workspace == 8 ? "is-active" : "" } :onclick "wmctrl -s 8" 8)
+    (button :class { workspace == 9 ? "is-active" : "" } :onclick "wmctrl -s 9" 9)
+    (button :class { workspace == 0 ? "is-active" : "" } :onclick "wmctrl -s 0" 0)))

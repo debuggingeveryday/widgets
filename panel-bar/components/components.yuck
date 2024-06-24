@@ -1,0 +1,3 @@
+(include "components/workspaces/workspaces.yuck")
+(include "components/music/music.yuck")
+(include "components/sidestuff/sidestuff.yuck")

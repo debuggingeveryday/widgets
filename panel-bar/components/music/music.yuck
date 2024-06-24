@@ -1,0 +1,13 @@
+(deflisten music "components/music/scripts/player_info.sh")
+
+(defwidget music []
+  (box :class "music"
+       :orientation "h"
+       :space-evenly false
+       :halign "start"
+    (label :text {music != "" ? "󰲸 ${music}" : "󰎊 No playing " }
+        :wrap true
+        :limit-width 25
+    )))
+
+
