@@ -3,7 +3,9 @@
 (defwidget bar []
   (box :orientation "h" :space-evenly false :halign "start" :spacing 10
     (workspaces)
-    (music)))
+    (music)
+    (time)
+    (date)))
 
 (defwindow bar
   :monitor 0

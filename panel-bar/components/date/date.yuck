@@ -1,1 +1,16 @@
-(deflisten foo :initial "whatever" "components/date/scripts/date.sh")
+(defpoll date :initial "--" :interval "30s" "components/date/scripts/date.sh")
+
+(defwidget date []
+  (box  :orientation "horizontal"
+        :halign "center"
+          (eventbox :onclick "eww --config ~/Desktop/widgets/panel-bar open winCalendar" :onhoverlost "eww --config ~/Desktop/widgets/panel-bar close winCalendar" :timeout "5s"
+            ) date))
+
+(defwindow winCalendar
+	:geometry (geometry :x "-20px" 
+						:y "7%" 
+                        :anchor "top right"
+						:width "280px" 
+						:height "60px")
+(calendar))
+

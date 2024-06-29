@@ -1,9 +1,12 @@
 .workspaces button:hover {
-  color: #D35D6E;
+  color: $hoverColor;
+  background-color: $hoverBackground;
 }
+
 .workspaces button.is-active {
-  background-color: #22d3ee;
+  background-color: $activeBackground;
   padding: 0px 10px;
-  color: #0f172a;
+  color: $activeColor;
+  font-weight: 900;
 }
 

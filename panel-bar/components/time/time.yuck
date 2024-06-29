@@ -1,0 +1,6 @@
+(defpoll time :initial "--" :interval "30s" "components/time/scripts/time.sh")
+
+(defwidget time []
+  (box  :orientation "horizontal"
+        :halign "center"
+            time))

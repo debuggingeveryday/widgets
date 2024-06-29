@@ -1,0 +1,20 @@
+(defpoll date :initial "--" :interval "30s" "components/date/scripts/date.sh")
+(defvar showCalendar false)
+
+(defwidget date []
+  (box  :orientation "horizontal"
+        :halign "center"
+          (eventbox :onhover "eww --config ~/Desktop/widgets/panel-bar update showCalendar=true" :onhoverlost "eww --config ~/Desktop/widgets/panel-bar update showCalendar=false"
+            (box :space-evenly false
+             (revealer :reveal showCalendar :transition 'slidedown' :duration "500ms"
+              (winCalendar)
+             )))))
+
+(defwindow winCalendar
+	:geometry (geometry :x "-20px" 
+						:y "7%" 
+                        :anchor "top right"
+						:width "280px" 
+						:height "60px")
+(calendar))
+
