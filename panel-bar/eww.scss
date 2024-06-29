@@ -1,3 +1,5 @@
+@import "./colors.scss"
+
 * {
   all: unset; //Unsets everything so you can style everything from scratch
   font-family: "CaskaydiaCove NF"
@@ -5,8 +7,8 @@
 
 //Global Styles
 .bar {
-  background-color: #1E1E1E;
-  color: #b0b4bc;
+  background-color: $background;
+  color: $color;
 }
 
 // Styles on classes (see eww.yuck for more information)

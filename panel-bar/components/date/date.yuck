@@ -1,0 +1,1 @@
+(deflisten foo :initial "whatever" "components/date/scripts/date.sh")
