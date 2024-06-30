@@ -1,3 +1,8 @@
 .music {
   all: unset;
+
+  &__track-info {
+    background-color: $background;
+    border-radius: 10px;
+  }
 }

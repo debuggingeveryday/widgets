@@ -1,16 +1,22 @@
-(defpoll date :initial "--" :interval "30s" "components/date/scripts/date.sh")
+(defpoll getDate :initial "--" :interval "30s" "components/date/scripts/date.sh")
+(defvar showCalendar false)
 
 (defwidget date []
-  (box  :orientation "horizontal"
-        :halign "center"
-          (eventbox :onclick "eww --config ~/Desktop/widgets/panel-bar open winCalendar" :onhoverlost "eww --config ~/Desktop/widgets/panel-bar close winCalendar" :timeout "5s"
-            ) date))
+(box
+  :class "date"
+  :orientation "horizontal"
+  :halign "center"
+          (eventbox 
+            :onclick "components/date/scripts/calendar_window.sh"
+            :timeout "500ms"
+          getDate)))
 
-(defwindow winCalendar
-	:geometry (geometry :x "-20px" 
-						:y "7%" 
-                        :anchor "top right"
+(defwindow windowCalendar
+	:geometry (geometry :x "-15%" 
+						:y "2%" 
+            :anchor "top center"
 						:width "280px" 
 						:height "60px")
-(calendar))
-
+    (calendar 
+      :class "date__calendar"))
+  

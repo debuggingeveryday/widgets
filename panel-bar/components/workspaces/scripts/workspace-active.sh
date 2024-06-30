@@ -1,3 +1,4 @@
 #!/bin/sh
 
-bspc query -d -D --names
+declare -r workspace=$(bspc query -d -D --names)
+echo $workspace
