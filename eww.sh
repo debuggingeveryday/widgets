@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# killall eww
+killall eww
 # eww daemon
 
 CONFIG=./panel-bar

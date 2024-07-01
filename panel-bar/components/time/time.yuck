@@ -1,6 +1,7 @@
 (defpoll time :initial "--" :interval "30s" "components/time/scripts/time.sh")
 
 (defwidget time []
-  (box  :orientation "horizontal"
-        :halign "center"
-            time))
+  (box :class "time" :orientation "horizontal" :halign "center" :space-evenly false
+    (label :class "time__icon" :text "")
+    (label :class "time__current-label" :text time)
+  ))

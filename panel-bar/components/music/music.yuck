@@ -11,20 +11,26 @@
        :space-evenly false
        :halign "start"
     (eventbox :onclick `components/music/scripts/toggle_track.sh`
-    (label :text {music != "" ? "󰲸 ${music}" : "󰎊 Not playing" }
-        :wrap true
-        :limit-width 25
-    ))))
+    (box :orientation "h" :halign "start" :space-evenly false :spacing 0
+      (label :text {music != "" ? "󰲸" : "󰎊" } :class "music__icon")
+      (label :text music :wrap true :limit-width 25 :class "music__playing-text"
+    )))))
 
 (defwindow trackInfo
-	:geometry (geometry :x "-28%" 
+	:geometry (geometry :x "-35.9%" 
 						:y "2%" 
             :anchor "top center"
 						:width "180px" 
 						:height "100px")
-    (box :class "music__track-info" :orientation "v" :halign "left" :space-evenly false
+    (box :class "music__track-info" :orientation "v" :halign "center" :space-evenly false
       (image :path imageUrl :image-width 180 :image-height 250)
-      (label :text `Artist: ${artist}` :truncate true)
-      (label :text `Title: ${title}` :truncate true)
-      (label :text `Album: ${album}` :truncate true)
+      (label :text `Artist: ${artist}`
+        :wrap true
+        :limit-width 25)
+      (label :text `Title: ${title}`
+        :wrap true
+        :limit-width 25)
+      (label :text `Album: ${album}`
+        :wrap true
+        :limit-width 25)
   ))

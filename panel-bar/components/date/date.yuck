@@ -9,7 +9,10 @@
           (eventbox 
             :onclick "components/date/scripts/calendar_window.sh"
             :timeout "500ms"
-          getDate)))
+          (box :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
+            (label :class "date__icon" :text "")
+            (label :class "date__label" :text getDate)
+          ))))
 
 (defwindow windowCalendar
 	:geometry (geometry :x "-15%" 

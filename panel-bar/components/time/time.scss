@@ -1,0 +1,14 @@
+.time {
+  all: unset;
+
+  &__current-label {
+    background-color: #2563eb;
+    padding: 0px 5px;
+  }
+
+  &__icon {
+    background-color: $activeBackground;
+    font-size: 1.50em;
+    padding: 0px 9px 0px 5px;
+  }
+ }

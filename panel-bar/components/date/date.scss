@@ -1,6 +1,18 @@
 .date {
+  all: unset;
+  padding: 0 5px;
+
+  &__icon {
+    background-color: $activeBackground;
+    padding: 0px 10px 0px 5px;
+  }
+
+  &__label {
+    background-color: #e11d48;
+    padding: 0px 5px;
+  }
+
   &__calendar {
-    background-color: $background;
     border-radius: 15px;
   }
 }
