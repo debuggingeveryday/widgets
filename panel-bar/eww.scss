@@ -14,8 +14,22 @@
 }
 
 // Styles on classes (see eww.yuck for more information)
+
+
+/* TODO: add literation for @import */
+
+// $component_styles: sidestuff, workspaces, music, time, date, cpu_info, mem_info, disk_info;
+//
+// @each $component in $component_styles {
+//   @import "components/#{$component}/#{$component}"
+// }
+
 @import "components/sidestuff/sidestuff"
 @import "components/workspaces/workspaces"
 @import "components/music/music"
 @import "components/time/time"
 @import "components/date/date"
+@import "components/cpu_info/cpu_info"
+@import "components/mem_info/mem_info"
+@import "components/disk_info/disk_info"
+@import "components/bat_info/bat_info"

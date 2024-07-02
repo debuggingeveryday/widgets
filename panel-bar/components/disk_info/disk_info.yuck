@@ -1,0 +1,7 @@
+(defwidget disk_info []
+  (box :class "disk_info" :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
+    (label :class "disk_info__icon" :text "󰋊")
+    (label
+      :class "disk_info__value"
+      :text `${round(EWW_DISK['/'].used_perc,0)}%`)
+))

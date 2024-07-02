@@ -1,0 +1,5 @@
+(defwidget mem_info []
+  (box :class "mem_info" :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
+    (label :class "mem_info__icon" :text "")
+    (label :class "mem_info__value" :text `${round(EWW_RAM.used_mem_perc,0)}%`)
+))

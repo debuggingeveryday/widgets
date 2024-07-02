@@ -3,3 +3,7 @@
 (include "components/sidestuff/sidestuff.yuck")
 (include "components/time/time.yuck")
 (include "components/date/date.yuck")
+(include "components/cpu_info/cpu_info.yuck")
+(include "components/mem_info/mem_info.yuck")
+(include "components/disk_info/disk_info.yuck")
+(include "components/bat_info/bat_info.yuck")

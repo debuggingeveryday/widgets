@@ -5,7 +5,12 @@
     (workspaces)
     (music)
     (time)
-    (date)))
+    (date)
+    (cpu_info)
+    (mem_info)
+    (disk_info)
+    (bat_info)
+))
 
 (defwindow bar
   :monitor 0

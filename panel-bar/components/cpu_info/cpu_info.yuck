@@ -1,0 +1,5 @@
+(defwidget cpu_info []
+  (box :class "cpu_info" :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
+    (label :class "cpu_info__icon" :text "")
+    (label :class "cpu_info__value" :text `${round(EWW_CPU.avg, 0)}%`)
+))
