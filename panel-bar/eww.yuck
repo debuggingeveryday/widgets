@@ -9,7 +9,7 @@
     (cpu_info)
     (mem_info)
     (disk_info)
-    (bat_info)
+    (batt_info)
 ))
 
 (defwindow bar

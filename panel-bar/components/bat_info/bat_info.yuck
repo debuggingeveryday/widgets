@@ -1,6 +1,0 @@
-(defpoll bat_icon :interval "5s" `components/bat_info/scripts/battery_icon.sh`)
-
-(defwidget bat_info []
-  (box :class "bat_icon" :orientation "horizontal" :halign "center" :space-evenly false 
-    (literal :content bat_icon)
-))

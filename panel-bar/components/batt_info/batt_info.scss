@@ -1,4 +1,6 @@
-.bat_info {
+.batt_info {
+  all:unset;
+  
   &__icon {
     background-color: $activeBackground;
     padding: 0 10px 0 5px;
