@@ -38,10 +38,10 @@ label_template() {
   local -r status="$1"
   local -r capacity=$(($2))
   local -a battery_style=()
-  
+
   if [[ $status == "Not charging" || $status == "Discharging" ]]; then
     battery_style=("${discharging_battery_icon[@]}")
-  elif [[ $staus == "Charging" ]]; then
+  elif [[ $status == "Charging" ]]; then
     battery_style=("${charging_battery_icon[@]}")
   fi
 
@@ -51,11 +51,14 @@ label_template() {
   [[ $capacity -ge 20 && $capacity -le 30 ]] && icon="${battery_style[3]}"
   [[ $capacity -ge 30 && $capacity -le 40 ]] && icon="${battery_style[4]}"
   [[ $capacity -ge 40 && $capacity -le 50 ]] && icon="${battery_style[5]}"
+  [[ $capacity -ge 50 && $capacity -le 60 ]] && icon="${battery_style[5]}"
   [[ $capacity -ge 60 && $capacity -le 70 ]] && icon="${battery_style[6]}"
   [[ $capacity -ge 70 && $capacity -le 80 ]] && icon="${battery_style[7]}"
   [[ $capacity -ge 80 && $capacity -le 90 ]] && icon="${battery_style[8]}"
   [[ $capacity -ge 90 && $capacity -le 100 ]] && icon="${battery_style[9]}"
   [[ $capacity -ge 100 ]] && icon="${battery_style[10]}"
+
+
 
   if [[ "$type" == "icon" ]]; then
     echo "${icon}"

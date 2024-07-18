@@ -10,6 +10,7 @@
     (mem_info)
     (disk_info)
     (batt_info)
+    (network_speed_info)
 ))
 
 (defwindow bar
