@@ -1,20 +1,22 @@
 .music {
   all: unset;
   background-color: $background;
+  padding-right: 15px;
+  padding-left: 8px;
+  border-radius: 15px;
+  margin-left: 4px;
 
   &__track-info {
-    background-color: $background;
     border-radius: 10px;
   }
 
   &__icon {
-    background-color: $activeBackground;
-    padding: 0px 7px 0px 5px;
-    margin: -9px 0px;
+    padding: 3px 7px 0px 5px;
+    font-size: 19px;
+    margin: 0px;
   }
 
   &__playing-text {
-    background-color: #0d9488;
     padding: 0px 5px;
   }
 }

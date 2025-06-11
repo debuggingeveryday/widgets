@@ -1,6 +1,10 @@
 .workspaces {
   all: unset;
   background-color: $background;
+  padding-right: 15px;
+  padding-left: 8px;
+  border-radius: 15px;
+  margin-left: 4px;
 }
 
 .workspaces button:hover {

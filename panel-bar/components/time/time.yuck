@@ -2,6 +2,5 @@
 
 (defwidget time []
   (box :class "time" :orientation "horizontal" :halign "center" :space-evenly false
-    (label :class "time__icon" :text "")
     (label :class "time__current-label" :text time)
   ))

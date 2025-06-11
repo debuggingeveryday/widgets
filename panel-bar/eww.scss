@@ -1,20 +1,44 @@
-@import "./colors.scss"
-
-* {
+@import './colors.scss' * {
   all: unset; //Unsets everything so you can style everything from scratch
-  font-family: "CaskaydiaCove NF";
+  font-family: 'CaskaydiaCove NF';
   background-color: transparent;
   font-size: 0.8rem;
 }
 
 //Global Styles
 .bar {
-  background-color: $background;
+  background-color: transparent;
   color: $color;
+  margin-top: 3px;
+
+  &__start-bar {
+    padding-right: 15px;
+    padding-left: 8px;
+    border-radius: 15px;
+    margin-left: 4px;
+  }
+
+  &__center-bar {
+    background-color: $background;
+    padding: 0 15px;
+    padding-right: 15px;
+    padding-left: 8px;
+    border-radius: 15px;
+    margin-left: 4px;
+  }
+
+  &__end-bar {
+    margin-left: 4px;
+    background-color: $background;
+    padding: 0 15px;
+    padding-right: 15px;
+    padding-left: 8px;
+    border-radius: 15px;
+    margin-left: 4px;
+  }
 }
 
 // Styles on classes (see eww.yuck for more information)
-
 
 /* TODO: add literation for @import */
 
@@ -24,13 +48,13 @@
 //   @import "components/#{$component}/#{$component}"
 // }
 
-@import "components/sidestuff/sidestuff"
-@import "components/workspaces/workspaces"
-@import "components/music/music"
-@import "components/time/time"
-@import "components/date/date"
-@import "components/cpu_info/cpu_info"
-@import "components/mem_info/mem_info"
-@import "components/disk_info/disk_info"
-@import "components/batt_info/batt_info"
-@import "components/network_speed_info/network_speed_info"
+@import 'components/sidestuff/sidestuff';
+@import 'components/workspaces/workspaces';
+@import 'components/music/music';
+@import 'components/time/time';
+@import 'components/date/date';
+@import 'components/cpu_info/cpu_info';
+@import 'components/mem_info/mem_info';
+@import 'components/disk_info/disk_info';
+@import 'components/batt_info/batt_info';
+@import 'components/network_speed_info/network_speed_info';

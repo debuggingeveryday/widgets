@@ -13,5 +13,5 @@ eww --config $CONFIG daemon
 # selected=$(eww --config $CONFIG list-windows | fzf)
 selected="bar"
 
-sleep 1 && eww --config $CONFIG open $selected && \
-tail -F /home/scrubs/.cache/eww/eww_efa9d495e9fe28dc.log
+sleep 1 && eww --config $CONFIG open $selected
+tail -F /home/scrubs/.cache/eww/eww_d07470f30e956586.log

@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "indentStyle": "space",
+  "maxLineLength": 120,
+  "indentSize": 2
+}

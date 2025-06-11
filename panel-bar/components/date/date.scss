@@ -2,12 +2,10 @@
   all: unset;
 
   &__icon {
-    background-color: $activeBackground;
     padding: 0px 10px 0px 5px;
   }
 
   &__label {
-    background-color: #e11d48;
     padding: 0px 5px;
   }
 

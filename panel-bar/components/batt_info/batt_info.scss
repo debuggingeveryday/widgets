@@ -1,13 +1,11 @@
 .batt_info {
-  all:unset;
- 
+  all: unset;
+
   &__icon {
-    background-color: $activeBackground;
     padding: 0 10px 0 5px;
   }
 
   &__value {
-    background-color: #65a30d;
     padding: 0 5px 0 8px;
   }
 }
