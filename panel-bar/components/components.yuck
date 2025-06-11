@@ -1,6 +1,5 @@
 (include "components/workspaces/workspaces.yuck")
 (include "components/music/music.yuck")
-(include "components/sidestuff/sidestuff.yuck")
 (include "components/time/time.yuck")
 (include "components/date/date.yuck")
 (include "components/cpu_info/cpu_info.yuck")

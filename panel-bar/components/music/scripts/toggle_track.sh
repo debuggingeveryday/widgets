@@ -1,11 +1,11 @@
 #!/bin/sh
 
-declare -a showTrack=$(eww --config ~/Desktop/widgets/panel-bar get showTrack)
+declare -a showTrack=$(eww --config ~/RANDOM/widgets/panel-bar get showTrack)
 
 if [[ $showTrack == true ]]; then
-  eww --config ~/Desktop/widgets/panel-bar close trackInfo
-  eww --config ~/Desktop/widgets/panel-bar update showTrack=false
+  eww --config ~/RANDOM/widgets/panel-bar close trackInfo
+  eww --config ~/RANDOM/widgets/panel-bar update showTrack=false
 else
-  eww --config ~/Desktop/widgets/panel-bar open trackInfo
-  eww --config ~/Desktop/widgets/panel-bar update showTrack=true
+  eww --config ~/RANDOM/widgets/panel-bar open trackInfo
+  eww --config ~/RANDOM/widgets/panel-bar update showTrack=true
 fi

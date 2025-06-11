@@ -34,7 +34,7 @@
     padding-right: 15px;
     padding-left: 8px;
     border-radius: 15px;
-    margin-left: 4px;
+    margin-right: 16px;
   }
 }
 
@@ -48,7 +48,6 @@
 //   @import "components/#{$component}/#{$component}"
 // }
 
-@import 'components/sidestuff/sidestuff';
 @import 'components/workspaces/workspaces';
 @import 'components/music/music';
 @import 'components/time/time';

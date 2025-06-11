@@ -1,5 +1,7 @@
 #!/bin/sh
 
+[[ ! -d "/sys/class/power_supply/BAT1" ]] && echo "no-module-battery" && exit 0
+
 declare -rA battery_status="$(cat /sys/class/power_supply/BAT1/status)"
 declare -rA battery_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
 
@@ -57,14 +59,13 @@ label_template() {
   [[ $capacity -ge 80 && $capacity -le 90 ]] && icon="${battery_style[8]}"
   [[ $capacity -ge 90 && $capacity -le 100 ]] && icon="${battery_style[9]}"
   [[ $capacity -ge 100 ]] && icon="${battery_style[10]}"
-
-
-
+  
   if [[ "$type" == "icon" ]]; then
     echo "${icon}"
   elif [[ "$type" == "value" ]]; then
     echo "${capacity}%"
   fi
+
 }
 
 label_template "$battery_status" "$battery_capacity" 

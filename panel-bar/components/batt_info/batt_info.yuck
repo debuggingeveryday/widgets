@@ -3,6 +3,8 @@
 
 (defwidget batt_info []
   (box :class "batt_info" :orientation "horizontal" :halign "center" :space-evenly "false"
-  (label :class "batt_info__icon" :text batt_icon)
-  (label :class "batt_info__value" :text batt_value)
+  (box :orientation "h"
+    (label :class "batt_info__icon" :text batt_icon)
+    (label :class "batt_info__value" :text batt_value)
+  )
 ))
