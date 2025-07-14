@@ -1,4 +1,5 @@
 (defpoll getDate :initial "--" :interval "30s" "components/date/scripts/date.sh")
+
 (defvar showCalendar false)
 
 (defwidget date []

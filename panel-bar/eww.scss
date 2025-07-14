@@ -1,4 +1,6 @@
-@import './colors.scss' * {
+@import './colors.scss';
+
+* {
   all: unset; //Unsets everything so you can style everything from scratch
   font-family: 'CaskaydiaCove NF';
   background-color: transparent;
@@ -35,6 +37,12 @@
     padding-left: 8px;
     border-radius: 15px;
     margin-right: 16px;
+  }
+
+  &__systray {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 0 5px;
   }
 }
 

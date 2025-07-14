@@ -1,0 +1,17 @@
+
+(defwindow example
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "10%"
+                               :width "0%"
+                               :height "0%"
+                               :anchor "top center")
+           :stacking "bg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "desktop"
+           :wm-ignore false
+  (box :orientation "v" :space-evenly false :spacing 0
+    (checkbox "check")
+    (checkbox "check")
+  )
+)
