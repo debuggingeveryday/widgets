@@ -2,6 +2,7 @@
 
 [[ ! -d "/sys/class/power_supply/BAT1" ]] && echo "no-module-battery" && exit 0
 
+declare -i low_battery_value=30
 declare -rA battery_status="$(cat /sys/class/power_supply/BAT1/status)"
 declare -rA battery_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
 
@@ -40,6 +41,9 @@ label_template() {
   local -r status="$1"
   local -r capacity=$(($2))
   local -a battery_style=()
+
+  # Warning low battery
+  [[ $capacity -lt $low_battery_value ]] && notify-send -t 1000 "Battery warning"
 
   if [[ $status == "Not charging" || $status == "Discharging" ]]; then
     battery_style=("${discharging_battery_icon[@]}")

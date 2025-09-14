@@ -14,4 +14,4 @@ eww --config $CONFIG daemon
 selected="bar"
 
 sleep 1 && eww --config $CONFIG open $selected
-tail -F /home/scrubs/.cache/eww/eww_d07470f30e956586.log
+tail -F /home/scrubs/.cache/eww/eww_aa136499f8fe3706.log
