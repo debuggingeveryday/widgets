@@ -1,8 +1,8 @@
-(deflisten music "components/music/scripts/player_info.sh")
-(defpoll imageUrl :interval "10s" `components/music/scripts/player_track.sh image`)
-(defpoll artist :interval "10s" `components/music/scripts/player_track.sh artist`)
-(defpoll title :interval "10s" `components/music/scripts/player_track.sh title`)
-(defpoll album :interval "10s" `components/music/scripts/player_track.sh album`)
+(deflisten music "scripts/music/player_info.sh")
+(defpoll imageUrl :interval "10s" `scripts/music/player_track.sh image`)
+(defpoll artist :interval "10s" `scripts/music/player_track.sh artist`)
+(defpoll title :interval "10s" `scripts/music/player_track.sh title`)
+(defpoll album :interval "10s" `scripts/music/player_track.sh album`)
 (defvar showTrack false)
 
 (defwidget music []
@@ -10,7 +10,7 @@
        :orientation "h"
        :space-evenly false
        :halign "start"
-    (eventbox :onclick `components/music/scripts/toggle_track.sh`
+    (eventbox :onclick `scripts/music/toggle_track.sh`
     (box :orientation "h" :halign "start" :space-evenly false :spacing 0
       (label :text {music != "" ? "󰲸" : "󰎊" } :class "music__icon")
       (label :text music :wrap true :limit-width 25 :class "music__playing-text"

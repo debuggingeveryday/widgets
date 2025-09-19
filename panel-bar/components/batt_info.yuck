@@ -1,5 +1,5 @@
-(defpoll batt_icon :interval "5s" `components/batt_info/scripts/battery_icon.sh "icon"`)
-(defpoll batt_value :interval "5s" `components/batt_info/scripts/battery_icon.sh "value"`)
+(defpoll batt_icon :interval "5s" `scripts/battery_icon.sh "icon"`)
+(defpoll batt_value :interval "5s" `scripts/battery_icon.sh "value"`)
 
 (defwidget batt_info []
   (box :class "batt_info" :orientation "horizontal" :halign "center" :space-evenly "false" :spacing 0

@@ -1,4 +1,4 @@
-(defpoll getDate :initial "--" :interval "30s" "components/date/scripts/date.sh")
+(defpoll getDate :initial "--" :interval "30s" "scripts/date/date.sh")
 
 (defvar showCalendar false)
 
@@ -8,7 +8,7 @@
   :orientation "horizontal"
   :halign "center"
           (eventbox 
-            :onclick "components/date/scripts/calendar_window.sh"
+            :onclick "scripts/date/calendar_window.sh"
             :timeout "500ms"
           (box :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
             (label :class "date__label" :text getDate)

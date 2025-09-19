@@ -56,12 +56,12 @@
 //   @import "components/#{$component}/#{$component}"
 // }
 
-@import 'components/workspaces/workspaces';
-@import 'components/music/music';
-@import 'components/time/time';
-@import 'components/date/date';
-@import 'components/cpu_info/cpu_info';
-@import 'components/mem_info/mem_info';
-@import 'components/disk_info/disk_info';
-@import 'components/batt_info/batt_info';
-@import 'components/network_speed_info/network_speed_info';
+@import 'assets/workspaces';
+@import 'assets/music';
+@import 'assets/time';
+@import 'assets/date';
+@import 'assets/cpu_info';
+@import 'assets/mem_info';
+@import 'assets/disk_info';
+@import 'assets/batt_info';
+@import 'assets/network_speed_info';

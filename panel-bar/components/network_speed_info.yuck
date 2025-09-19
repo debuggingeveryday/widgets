@@ -1,5 +1,5 @@
-(defpoll network_stat_up :initial "--" :interval "1s" `components/network_speed_info/scripts/network_stat.sh up`)
-(defpoll network_stat_down :initial "--" :interval "1s" `components/network_speed_info/scripts/network_stat.sh down`)
+(defpoll network_stat_up :initial "--" :interval "1s" `scripts/network_stat.sh up`)
+(defpoll network_stat_down :initial "--" :interval "1s" `scripts/network_stat.sh down`)
 
 (defwidget network_speed_info []
   (box :class "network_speed_info" :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
