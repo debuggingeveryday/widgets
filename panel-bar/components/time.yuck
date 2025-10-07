@@ -1,4 +1,4 @@
-(defpoll time :initial "--" :interval "30s" "scripts/scripts/time.sh")
+(defpoll time :initial "--" :interval "30s" "scripts/time.sh")
 
 (defwidget time []
   (box :class "time" :orientation "horizontal" :halign "center" :space-evenly false
