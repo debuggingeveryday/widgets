@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[[ ! -d "/sys/class/power_supply/BAT1" ]] && echo "no-module-battery" && exit 0
+[[ ! -d "/sys/class/power_supply/BAT1" ]] && echo "-" && exit 0
 
 declare -rA battery_status="$(cat /sys/class/power_supply/BAT1/status)"
 declare -rA battery_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"

@@ -8,5 +8,5 @@
        :space-evenly true
        :halign "start"
     (for entry in data
-      (button :class { workspace == entry ? "is-active" : "" } 
+      (button :class { workspace == entry ? "workspaces__button--is-active" : "" } 
         :onclick "bspc desktop -f ${entry}" entry))))

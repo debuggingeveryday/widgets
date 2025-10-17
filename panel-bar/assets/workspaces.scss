@@ -5,18 +5,18 @@
   padding-left: 8px;
   border-radius: 15px;
   margin-left: 4px;
-}
 
-.workspaces button:hover {
-  color: $hoverColor;
-  background-color: $hoverBackground;
-}
+  &__button:hover {
+    color: $hoverColor;
+    background-color: $hoverBackground;
+  }
 
-.workspaces button.is-active {
-  background-color: $activeBackground;
-  padding: 0px 4px;
-  margin: 4px 1px;
-  border-radius: 100%;
-  color: $activeColor;
-  font-weight: 900;
+  &__button--is-active {
+    background-color: $activeBackground;
+    padding: 0px 4px;
+    margin: 4px 1px;
+    border-radius: 100%;
+    color: $activeColor;
+    font-weight: 900;
+  }
 }
