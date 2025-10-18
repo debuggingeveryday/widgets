@@ -17,8 +17,8 @@
     )))))
 
 (defwindow trackInfo
-	:geometry (geometry :x "-35.9%" 
-						:y "2%" 
+	:geometry (geometry :x "-31.5%" 
+						:y "3%"
             :anchor "top center"
 						:width "180px" 
 						:height "100px")

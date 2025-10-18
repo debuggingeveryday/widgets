@@ -15,8 +15,8 @@
           ))))
 
 (defwindow windowCalendar
-	:geometry (geometry :x "-15%" 
-						:y "2%" 
+	:geometry (geometry :x "-3%" 
+						:y "3%" 
             :anchor "top center"
 						:width "280px" 
 						:height "60px")

@@ -3,7 +3,7 @@
 killall eww
 # eww daemon
 
-CONFIG=./panel-bar
+CONFIG=$PWD/panel-bar
 
 eww --config $CONFIG kill
 eww --config $CONFIG close-all
@@ -14,4 +14,4 @@ eww --config $CONFIG daemon
 selected="bar"
 
 sleep 1 && eww --config $CONFIG open $selected
-# tail -F /home/scrubs/.cache/eww/eww_aa136499f8fe3706.log
+tail -F $HOME/.cache/eww/eww_aa136499f8fe3706.log

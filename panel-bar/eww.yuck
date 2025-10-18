@@ -1,18 +1,18 @@
 (include "components/components.yuck")
 
 (defwidget bar []
-(box :orientation "h"
+(box :orientation "h" 
  (box :orientation "h" :class "bar__start-bar" :space-evenly true :halign "start" :spacing 10
     (workspaces)
     (music)
   )
   
-  (box :orientation "h" :class "bar__center-bar" :space-evenly true :halign "center" :spacing 10
+  (box :orientation "h" :class "bar__center-bar" :space-evenly true :halign "end" :spacing 10
     (time)
     (date)
   )
 
-  (box :orientation "h" :class "bar__end-bar" :space-evenly false :halign "start" :spacing 0
+  (box :orientation "h" :class "bar__end-bar" :space-evenly false :halign "end" :spacing 0
     (cpu_info)
     (mem_info)
     (disk_info)
@@ -20,12 +20,11 @@
     (network_speed_info)
   )
 
-  (box :orientation "h" :class "bar__systray" :space-evenly false :halign "center" :spacing 0
+  (box :orientation "h" :class "bar__systray" :space-evenly false :halign "end" :spacing 0
     (systray :orientation "h"
       :class "systemtray"
-      :iconsize "4px"
-      :spacing "10px"
-      :icontheme "Papirus Dark"
+      :iconsize "1"
+      :spacing "4"
     )
   )
 
