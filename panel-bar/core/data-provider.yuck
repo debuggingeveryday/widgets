@@ -1,0 +1,18 @@
+;; Data Provider Interface - Dependency Inversion Principle
+;; Abstracts data sources from widgets
+
+;; CPU Data Provider
+(defpoll cpu-usage :interval "2s" `scripts/cpu_usage.sh`)
+
+;; Memory Data Provider  
+(defpoll memory-usage :interval "2s" `scripts/memory_usage.sh`)
+
+;; Battery Data Provider
+(defpoll battery-level :interval "5s" `scripts/battery_level.sh`)
+(defpoll battery-icon :interval "5s" `scripts/battery_icon.sh`)
+
+;; Network Data Provider
+(defpoll network-speed :interval "1s" `scripts/network_speed.sh`)
+
+;; Music Data Provider
+(deflisten music-status :interval "2s" `scripts/music/player_info.sh`)

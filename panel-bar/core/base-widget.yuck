@@ -1,0 +1,15 @@
+;; Base widget interface following SOLID principles
+;; This defines the contract that all widgets must follow
+
+;; Abstract base widget - follows Single Responsibility Principle
+;; Each widget has one responsibility: display specific system information
+(defwidget base-system-widget [icon value class-name]
+  (box :class class-name
+       :orientation "horizontal"
+       :halign "center"
+       :space-evenly false
+       :spacing 0
+    (label :class `${class-name}__icon` :text icon)
+    (label :class `${class-name}__value` :text value)
+  )
+)

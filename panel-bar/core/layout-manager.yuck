@@ -1,0 +1,72 @@
+;; Layout Manager - Single Responsibility: Manage widget layout
+;; Follows Liskov Substitution Principle - all widgets are interchangeable
+
+(include "core/widget-factory.yuck")
+(include "components/workspaces.yuck")
+(include "components/time.yuck")
+(include "components/date.yuck")
+(include "components/disk_info.yuck")
+
+;; Start Bar Section - Single Responsibility: Left side widgets
+(defwidget start-bar-section []
+  (box :orientation "h" 
+       :class "bar__start-bar"
+       :space-evenly true
+       :halign "start"
+       :spacing 10
+    (workspaces)
+    (music-widget)
+  )
+)
+
+;; Center Bar Section - Single Responsibility: Center widgets  
+(defwidget center-bar-section []
+  (box :orientation "h" 
+       :class "bar__center-bar"
+       :space-evenly true
+       :halign "end"
+       :spacing 10
+    (time)
+    (date)
+  )
+)
+
+;; End Bar Section - Single Responsibility: Right side system info
+(defwidget end-bar-section []
+  (box :orientation "h" 
+       :class "bar__end-bar"
+       :space-evenly false
+       :halign "end"
+       :spacing 0
+    (cpu-widget)
+    (memory-widget)
+    (disk_info)
+    (battery-widget)
+    (network-widget)
+  )
+)
+
+;; System Tray Section - Single Responsibility: System tray
+(defwidget systray-section []
+  (box :orientation "h" 
+       :class "bar__systray"
+       :space-evenly false
+       :halign "end"
+       :spacing 0
+    (systray :orientation "h"
+      :class "systemtray"
+      :iconsize "1"
+      :spacing "4"
+    )
+  )
+)
+
+;; Main Bar Layout - Single Responsibility: Overall layout coordination
+(defwidget solid-bar []
+  (box :orientation "h"
+    (start-bar-section)
+    (center-bar-section)
+    (end-bar-section)
+    (systray-section)
+  )
+)

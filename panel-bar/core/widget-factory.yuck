@@ -1,0 +1,38 @@
+;; Widget Factory - Open/Closed Principle
+;; Easy to extend with new widgets without modifying existing code
+
+(include "core/base-widget.yuck")
+(include "core/data-provider.yuck")
+
+;; CPU Widget - Single Responsibility: Display CPU usage
+(defwidget cpu-widget []
+  (base-system-widget "󰍛 " `${round(cpu-usage, 0)}%` "cpu_info")
+)
+
+;; Memory Widget - Single Responsibility: Display memory usage  
+(defwidget memory-widget []
+  (base-system-widget "󰍛" `${round(memory-usage, 0)}%` "mem_info")
+)
+
+;; Battery Widget - Single Responsibility: Display battery status
+(defwidget battery-widget []
+  (box :class "batt_info" 
+       :visible {battery-level != "-" && battery-icon != "-"}
+       :orientation "horizontal" 
+       :halign "center" 
+       :space-evenly false 
+       :spacing 0
+    (label :class "batt_info__icon" :text battery-icon)
+    (label :class "batt_info__value" :text battery-level)
+  )
+)
+
+;; Network Widget - Single Responsibility: Display network speed
+(defwidget network-widget []
+  (base-system-widget "󰤨" `${network-speed}` "network_info")
+)
+
+;; Music Widget - Single Responsibility: Display music status
+(defwidget music-widget []
+  (base-system-widget {music-status != "" ? "󰲸" : "󰎊"} music-status "music")
+)
