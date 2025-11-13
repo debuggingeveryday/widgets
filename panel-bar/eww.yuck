@@ -23,7 +23,6 @@
   (box :orientation "h" :class "bar__systray" :space-evenly false :halign "end" :spacing 0
     (systray :orientation "h"
       :class "systemtray"
-      :iconsize "1"
       :spacing "4"
     )
   )
