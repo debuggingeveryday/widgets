@@ -1,0 +1,24 @@
+;;;; App list LISTEN VAR
+(defpoll search_listen :interval "1s" "cat ./search_items.txt")
+
+;;;; Rofi style search
+(defwidget searchapps []
+  (eventbox :onhoverlost "eww close searchapps"
+    (box :orientation "v" :space-evenly false :class "search-win" :halign "top" :valign "top"
+      (box :orientation "h" :space-evenly false :class "searchapps-bar" :halign "top" :valign "top"
+        (label :class "search-label" :text "")
+        (input :class "search-bar" :onchange "./search.sh {}"))
+      (literal :halign "center" :valign "center" :class "app-container" :content search_listen))))
+
+;;;; Searching Windows
+(defwindow searchapps
+  :wm-ignore false
+  :monitor 0
+  :windowtype "dialog"
+  :stacking "fg"
+  :geometry (geometry :x "40%"
+                      :y "30%"
+                      :width "20%"
+                      :height "50%"
+                      :anchor "top left")
+(searchapps))
