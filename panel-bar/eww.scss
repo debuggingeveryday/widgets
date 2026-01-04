@@ -1,3 +1,6 @@
+@use "sass:math";
+@use 'sass:list';
+
 @import './colors.scss';
 
 * {
@@ -60,9 +63,10 @@
 @import 'assets/music';
 @import 'assets/time';
 @import 'assets/date';
-@import 'assets/cpu_info';
-@import 'assets/mem_info';
-@import 'assets/disk_info';
-@import 'assets/batt_info';
-@import 'assets/network_speed_info';
-@import 'assets/system_status';
+
+@import 'assets/system_status/cpu_info';
+@import 'assets/system_status/disk_info';
+@import 'assets/system_status/mem_info';
+@import 'assets/system_status/batt_info';
+@import 'assets/system_status/network_speed_info';
+@import 'assets/system_status/system_status';

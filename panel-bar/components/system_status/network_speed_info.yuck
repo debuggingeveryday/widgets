@@ -1,10 +1,18 @@
-(defpoll network_stat_up :initial "--" :interval "1s" `scripts/network_stat.sh up`)
-(defpoll network_stat_down :initial "--" :interval "1s" `scripts/network_stat.sh down`)
-
 (defwidget network_speed_info []
   (box :class "network_speed_info" :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
-    (label :class "network_speed_info__icon" :text "󰛶")
-    (label :class "network_speed_info__value" :text network_stat_up)
-    (label :class "network_speed_info__icon" :text "󰛴")
-    (label :class "network_speed_info__value" :text network_stat_down)
+    (label :class "network_speed_info_lan__icon" :text "󰛶 ")
+    (label :class "network_speed_info_lan__value" :text `${round(EWW_NET.enp45s0.NET_UP,0)}/${round(EWW_NET.enp45s0.NET_DOWN,0)}`)
+    (label :class "network_speed_info_wifi__icon" :text " ")
+    (label :class "network_speed_info_wifi__value" :text `${round(EWW_NET.wlan0.NET_UP,0)}/${round(EWW_NET.wlan0.NET_DOWN,0)}`)
 ))
+
+; (defpoll network_stat_up :initial "--" :interval "1s" `scripts/network_stat.sh up`)
+; (defpoll network_stat_down :initial "--" :interval "1s" `scripts/network_stat.sh down`)
+
+; (defwidget network_speed_info []
+;   (box :class "network_speed_info" :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
+;     (label :class "network_speed_info__icon" :text "󰛶")
+;     (label :class "network_speed_info__value" :text network_stat_up)
+;     (label :class "network_speed_info__icon" :text "󰛴")
+;     (label :class "network_speed_info__value" :text network_stat_down)
+; ))

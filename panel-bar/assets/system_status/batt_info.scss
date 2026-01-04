@@ -3,6 +3,7 @@
 
   &__icon {
     padding: 0 0px 0 5px;
+    color: list.nth($all-colors, math.random(length($all-colors)));
   }
 
   &__value {
