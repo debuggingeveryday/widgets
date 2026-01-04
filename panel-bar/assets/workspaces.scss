@@ -6,17 +6,22 @@
   border-radius: 15px;
   margin-left: 4px;
 
-  &__button:hover {
-    color: $hoverColor;
-    background-color: $hoverBackground;
-  }
-
-  &__button--is-active {
-    background-color: $activeBackground;
+  &__button {
+    font-weight: 900;
     padding: 0px 4px;
     margin: 4px 1px;
-    border-radius: 100%;
-    color: $activeColor;
-    font-weight: 900;
+
+    &:hover {
+      color: $hoverColor;
+      background-color: $hoverBackground;
+    }
+
+    &--is-active {
+      padding: 0px 4px;
+      margin: 4px 1px;
+      background-color: $activeBackground;
+      border-radius: 100%;
+      color: $activeColor;
+    }
   }
 }
