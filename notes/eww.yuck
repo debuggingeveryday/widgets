@@ -1,4 +1,3 @@
-
 (defwindow example
            :monitor 0
            :geometry (geometry :x "0%"

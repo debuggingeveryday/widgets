@@ -3,23 +3,25 @@
 (defvar showCalendar false)
 
 (defwidget date []
-(box
-  :class "date"
-  :orientation "horizontal"
-  :halign "center"
-          (eventbox 
-            :onclick "scripts/date/calendar_window.sh"
-            :timeout "500ms"
-          (box :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
-            (label :class "date__label" :text getDate)
-          ))))
+  (box
+    :class "date"
+    :orientation "horizontal"
+    :halign "center"
+    (eventbox
+      :onclick "scripts/date/calendar_window.sh"
+      :timeout "500ms"
+      (box :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
+        (label :class "date__label" :text getDate)
+      )
+)))
 
 (defwindow windowCalendar
-	:geometry (geometry :x "-3%" 
-						:y "3%" 
-            :anchor "top center"
-						:width "280px" 
-						:height "60px")
-    (calendar 
-      :class "date__calendar"))
-  
+  :geometry (geometry :x "-3%"
+    :y "3%"
+    :anchor "top center"
+    :width "280px"
+  :height "60px")
+  (calendar
+  :class "date__calendar")
+)
+

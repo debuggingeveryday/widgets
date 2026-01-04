@@ -4,12 +4,13 @@
 
 (defwidget workspaces []
   (box :class "workspaces"
-       :orientation "h"
-       :space-evenly true
-       :halign "start"
+    :orientation "h"
+    :space-evenly true
+    :halign "start"
     (for entry in data
-      (button :class { workspace == entry ? "workspaces__button--is-active" : "workspaces__button" } 
-        :onclick "bspc desktop -f ${entry}" entry))))
+      (button :class { workspace == entry ? "workspaces__button--is-active" : "workspaces__button" }
+      :onclick "bspc desktop -f ${entry}" entry)
+)))
 
 
 ;;;; (defpoll workspace1 :interval "0.1s" :initial "no value" "scripts/workspace/workspace-active.sh")
@@ -17,11 +18,12 @@
 ;;;; (defvar data1 "[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]")
 
 ;;;; (defwidget workspaces1 []
-;;;;  (box :class "workspaces"
-;;;;       :orientation "h"
-;;;;       :space-evenly true
-;;;;       :halign "start"
-;;;;    (for entry in data1
-;;;;      (button :class { workspace == entry ? "workspaces__button--is-active" : "workspaces__button" } 
-;;;;        :onclick "bspc desktop -f ${entry}" entry))))
+  ;;;;  (box :class "workspaces"
+    ;;;;       :orientation "h"
+    ;;;;       :space-evenly true
+    ;;;;       :halign "start"
+    ;;;;    (for entry in data1
+      ;;;;      (button :class { workspace == entry ? "workspaces__button--is-active" : "workspaces__button" }
+      ;;;;        :onclick "bspc desktop -f ${entry}" entry)
+;;; )))
 

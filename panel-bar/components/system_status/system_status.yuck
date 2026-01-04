@@ -1,0 +1,28 @@
+(include "components/system_status/cpu_info.yuck")
+(include "components/system_status/mem_info.yuck")
+(include "components/system_status/disk_info.yuck")
+(include "components/system_status/batt_info.yuck")
+(include "components/system_status/network_speed_info.yuck")
+
+(defvar showSystemStatus true)
+(defvar onhoverSystemStatus true)
+
+(defwidget system_status []
+  (box :orientation "h" :class "bar__end-bar" :space-evenly false :halign "end" :spacing 0 :tooltip "${ showSystemStatus ? 'Close' : 'Open' } System Info"
+    (children :nth 0)
+    (button :onclick "${EWW_CMD} update showSystemStatus=${ showSystemStatus ? false : true }"
+      (label :text "${ showSystemStatus ? '󰞔' : '󱡇' }")
+    )
+    (revealer :reveal showSystemStatus
+      :transition "slideleft"
+      :duration "500ms"
+      (box :orientation "h" :class "bar__end-bar" :space-evenly false :halign "end" :spacing 0
+        (cpu_info)
+        (mem_info)
+        (disk_info)
+        (batt_info)
+        (network_speed_info)
+      )
+    )
+  )
+)

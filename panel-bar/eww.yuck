@@ -13,11 +13,7 @@
   )
 
   (box :orientation "h" :class "bar__end-bar" :space-evenly false :halign "end" :spacing 0
-    (cpu_info)
-    (mem_info)
-    (disk_info)
-    (batt_info)
-    (network_speed_info)
+    (system_status)
   )
 
   (box :orientation "h" :class "bar__systray" :space-evenly false :halign "end" :spacing 0
