@@ -13,7 +13,7 @@ enteringText() {
 
 
 while true; do
- playing=$(playerctl metadata --format '{{ artist }} - {{ title }}' || true)
+ playing=$(playerctl metadata --format '{{ artist }} - {{ title }}' &> /dev/null )
  length=${#playing}
 
  if [[ ! -z "$playing" ]]; then
