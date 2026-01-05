@@ -1,3 +1,4 @@
+(include "env.yuck")
 (include "components/components.yuck")
 
 (defwidget bar []

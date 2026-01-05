@@ -1,0 +1,3 @@
+(defwidget network_info []
+  (box :class "network_speed_info" :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
+))

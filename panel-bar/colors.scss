@@ -277,6 +277,24 @@ $color-stone-950: #0c0a09;
 $color-black: #000000;
 $color-white: #ffffff;
 
-$all-colors: $color-red-500, $color-orange-500, $color-amber-500, $color-yellow-500, $color-lime-500, $color-green-500, $color-emerald-500, $color-teal-500, $color-cyan-500, $color-sky-500, $color-blue-500, $color-indigo-500, $color-violet-500, $color-purple-500, $color-fuchsia-500, $color-pink-500, $color-rose-500;
+// 17 diff colors and 5 other colors
 
+$all-colors:
+  $color-red-500, $color-orange-500, $color-amber-500, $color-yellow-500,
+  $color-lime-500, $color-green-500, $color-emerald-500, $color-teal-500,
+  $color-cyan-500, $color-sky-500, $color-blue-500, $color-indigo-500,
+  $color-violet-500, $color-purple-500, $color-fuchsia-500, $color-pink-500,
+  $color-rose-500;
 
+$unique-colors-value-collect: ();
+
+@while list.length($unique-colors-value-collect) < 8 {
+  $selected-color: list.nth($all-colors, math.random(list.length($all-colors)));
+
+  @if not list.index($unique-colors-value-collect, $selected-color) {
+    $unique-colors-value-collect: list.append(
+      $unique-colors-value-collect,
+      $selected-color
+    );
+  }
+}

@@ -1,9 +1,15 @@
 (defwidget network_speed_info []
   (box :class "network_speed_info" :orientation "horizontal" :halign "center" :space-evenly false :spacing 0
-    (label :class "network_speed_info_lan__icon" :text "󰛶 ")
-    (label :class "network_speed_info_lan__value" :text `${round(EWW_NET.enp45s0.NET_UP,0)}/${round(EWW_NET.enp45s0.NET_DOWN,0)}`)
-    (label :class "network_speed_info_wifi__icon" :text " ")
-    (label :class "network_speed_info_wifi__value" :text `${round(EWW_NET.wlan0.NET_UP,0)}/${round(EWW_NET.wlan0.NET_DOWN,0)}`)
+    (revealer :reveal showLanSpeed
+      (box :orientation "h" :space-evenly false :halign "end" :spacing 0
+        (label :class "network_speed_info_lan__icon" :text "󰛶 ")
+        (label :class "network_speed_info_lan__value" :text `${formatbytes(round(EWW_NET[lanName].NET_UP,0),true,"iec")}|${formatbytes(round(EWW_NET[lanName].NET_DOWN,0),true,"iec")}`)
+    ))
+    (revealer :reveal showWifiSpeed
+      (box :orientation "h" :space-evenly false :halign "end" :spacing 0
+      (label :class "network_speed_info_wifi__icon" :text " ")
+      (label :class "network_speed_info_wifi__value" :text `${formatbytes(round(EWW_NET[wifiName].NET_UP,0),true,"iec")}|${formatbytes(round(EWW_NET[wifiName].NET_DOWN,0),true,"iec")}`)
+    ))
 ))
 
 ; (defpoll network_stat_up :initial "--" :interval "1s" `scripts/network_stat.sh up`)

@@ -5,7 +5,6 @@
 (include "components/system_status/network_speed_info.yuck")
 
 (defvar showSystemStatusButton false)
-(defvar showSystemStatus true)
 
 (defwidget system_status []
   (eventbox :class "eventbox"

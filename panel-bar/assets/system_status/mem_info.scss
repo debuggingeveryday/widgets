@@ -1,7 +1,7 @@
 .mem_info {
   &__icon {
     padding: 0 0px 0 5px;
-    color: list.nth($all-colors, math.random(length($all-colors)));
+    color: list.nth($all-colors, 4);
   }
 
   &__value {

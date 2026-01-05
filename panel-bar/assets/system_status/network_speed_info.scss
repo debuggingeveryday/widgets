@@ -2,7 +2,7 @@
   &_wifi {
     &__icon {
       padding: 0 0px 0 5px;
-      color: list.nth($all-colors, math.random(length($all-colors)));
+      color: list.nth($all-colors, 5);
     }
 
     &__value {
@@ -13,7 +13,7 @@
   &_lan {
     &__icon {
       padding: 0 0px 0 5px;
-      color: list.nth($all-colors, math.random(length($all-colors)));
+      color: list.nth($all-colors, 6);
     }
 
     &__value {
