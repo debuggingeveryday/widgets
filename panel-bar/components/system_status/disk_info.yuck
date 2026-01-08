@@ -4,4 +4,5 @@
     (label
       :class "disk_info__value"
       :text `${round(EWW_DISK['/'].used_perc,0)}%`)
-))
+  )
+)

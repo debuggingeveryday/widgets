@@ -12,21 +12,21 @@
     :onhoverlost "${EWW_CMD} update showSystemStatusButton=${showSystemStatus != showSystemStatusButton}"
     :timeout "500ms"
 
-  (box :orientation "h" :class "system_status" :space-evenly false :halign "end" :spacing 0 :tooltip "${ showSystemStatus ? 'Close' : 'Open' } System Info"
-    (children :nth 0)
-    (revealer :reveal showSystemStatusButton
-      :transition "slideleft"
-      :duration "500ms"
-      (box :orientation "h" :space-evenly false :halign "end" :spacing 0
-        (button :onclick "${EWW_CMD} update showSystemStatus=${ showSystemStatus ? false : true }" :class "system_status__toggle-button"
-          (label :text "${ showSystemStatus ? '󰞔 ' : '󱡇 ' }")
+    (box :orientation "h" :class "system_status" :space-evenly false :halign "end" :spacing 0 :tooltip "${ showSystemStatus ? 'Close' : 'Open' } System Info"
+      (children :nth 0)
+      (revealer :reveal showSystemStatusButton
+        :transition "slideleft"
+        :duration "500ms"
+        (box :orientation "h" :space-evenly false :halign "end" :spacing 0
+          (button :onclick "${EWW_CMD} update showSystemStatus=${ showSystemStatus ? false : true }" :class "system_status__toggle-button"
+            (label :text "${ showSystemStatus ? '󰞔 ' : '󱡇 ' }")
+          )
         )
       )
-    )
 
-    (revealer :reveal showSystemStatus
-      :transition "slideleft"
-      :duration "500ms"
+      (revealer :reveal showSystemStatus
+        :transition "slideleft"
+        :duration "500ms"
         (box :orientation "h" :space-evenly false :halign "end" :spacing 0
           (cpu_info)
           (mem_info)
