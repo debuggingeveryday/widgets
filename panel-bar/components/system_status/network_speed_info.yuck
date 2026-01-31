@@ -1,6 +1,6 @@
 (defwidget network_speed_info []
   (box :class "network_speed_info" :orientation "h" :halign "center" :space-evenly false :spacing 0
-    (children :nth 0)
+  (children :nth 0)
     (revealer :reveal showLanSpeed
       (box :orientation "h" :space-evenly false :halign "end" :spacing 0
         (children :nth 1)
