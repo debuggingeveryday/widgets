@@ -1,16 +1,15 @@
-(defwindow example
-           :monitor 0
+(defpoll planner :initial "--" :interval "1s" "scripts/planner.sh")
+
+(defwindow planner
+           :monitor 1
            :geometry (geometry :x "0%"
-                               :y "10%"
+                               :y "0%"
                                :width "0%"
                                :height "0%"
-                               :anchor "top center")
+                               :anchor "center center")
            :stacking "bg"
            :reserve (struts :distance "40px" :side "top")
            :windowtype "desktop"
            :wm-ignore false
-  (box :orientation "v" :space-evenly false :spacing 0
-    (checkbox "check")
-    (checkbox "check")
-  )
+  (box :class "planner" :orientation "v" :space-evenly false :spacing 0 planner)
 )
