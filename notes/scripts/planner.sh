@@ -1,3 +1,3 @@
 #!/bin/sh
 
-glow $HOME/Obsidian/'Project Scrubs'/Planner.md
+glow $HOME/Obsidian/Planner.md

@@ -1,7 +1,23 @@
 (defpoll planner :initial "--" :interval "1s" "scripts/planner.sh")
 
-(defwindow planner
+(defpoll board :initial "--" :interval "1s" "scripts/board.sh")
+
+(defwindow board
            :monitor 1
+           :geometry (geometry :x "0%"
+                               :y "0%"
+                               :width "0%"
+                               :height "0%"
+                               :anchor "center center")
+           :stacking "bg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "desktop"
+           :wm-ignore false
+  (box :class "board" :orientation "v" :space-evenly false :spacing 0 board)
+)
+
+(defwindow planner
+           :monitor 0
            :geometry (geometry :x "0%"
                                :y "0%"
                                :width "0%"
