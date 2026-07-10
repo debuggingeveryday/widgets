@@ -15,7 +15,7 @@ selected="bar"
 # selected1="bar1"
 
 sleep 1 && eww --config $CONFIG open $selected;
-sleep 1 && eww --config ./notes open planner
-sleep 1 && eww --config ./notes open board
+sleep 1 && eww --config ./notes open-many planner board
+sleep 1 && bspc wm -r
 # sleep 1 && eww --config $CONFIG open $selected1
 # tail -F $HOME/.cache/eww/eww_aa136499f8fe3706.log
